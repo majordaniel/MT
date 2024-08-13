@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  mtmiddleware.api:
+    image: ${DOCKER_REGISTRY-}fbnquestdocker/mtmiddlewareapi
+    build:
+      context: .
+      dockerfile: MTMiddleware.Api/Dockerfile
+    ports:
+     - "9074:80"
+
+
+  mtmiddlewarebackgroundservice:
+    image: ${DOCKER_REGISTRY-}fbnquestdocker/mtmiddlewarebackgroundservice
+    build:
+      context: .
+      dockerfile: MTMiddleware.BackgroundService/Dockerfile
+    ports:
+     - "9074:80"

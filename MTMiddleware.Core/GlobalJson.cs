@@ -1,0 +1,16 @@
+﻿global using AutoMapper;
+global using MTMiddleware.Core.Services.Interfaces;
+global using MTMiddleware.Data.Entities;
+global using MTMiddleware.Data.ViewModels;
+global using MTMiddleware.Shared.EntityService.BaseService;
+global using MTMiddleware.Shared.EntityService.Repository;
+global using MTMiddleware.Shared.EntityService.UnitOfWork;
+global using MTMiddleware.Shared.Enumerations;
+global using MTMiddleware.Shared.Pagination;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Logging;
+global using UtilityLibrary;
+global using UtilityLibrary.Common;
+global using UtilityLibrary.Enumerations;
+global using UtilityLibrary.Extensions;
+global using UtilityLibrary.Models;

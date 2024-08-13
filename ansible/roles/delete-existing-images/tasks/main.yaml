@@ -1,0 +1,14 @@
+- name: Delete all stopped containers
+  become: true
+  ignore_errors: yes
+  args:
+    warn: no
+  shell: "docker ps -a -q -f status=exited | xargs docker rm"
+
+
+- name: Delete existing docker images on the cluster
+  become: true
+  args:
+    warn: no
+  shell: "docker images --filter reference=registry-1.docker.io/fbnquestdocker/* -q | xargs docker rmi -f"
+  ignore_errors: yes

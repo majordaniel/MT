@@ -1,0 +1,5 @@
+domain_name: "{{ lookup ('env', 'domain_name') }}"
+IMAGE_NAME: "{{ lookup ('env', 'IMAGE_NAME') }}"
+APP_NAME: "{{ lookup ('env', 'APP_NAME') }}"
+IMG_TAG:  "{{ lookup ('env', 'IMG_TAG') }}"
+

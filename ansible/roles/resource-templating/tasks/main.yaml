@@ -1,0 +1,9 @@
+- name: Resource templating 
+  template:
+    src: "{{item.src}}"
+    dest: "{{item.dest}}"
+    force: yes
+  loop:
+  - {src: "../ingress.yaml.j2", dest: "../ingress.yaml"}
+  - {src: "../deployments.yaml.j2", dest: "../deployments.yaml"}
+  - {src: "../services.yaml.j2", dest: "../services.yaml"}

@@ -1,0 +1,13 @@
+- hosts: localhost
+  vars_files:
+    - ./vars/main.yaml
+  roles:
+    - delete-existing-images
+    - resource-templating
+    
+- hosts: k8s_cluster
+  remote_user: tmp0006
+  vars_files:
+    - ./vars/main.yaml
+  roles:
+    - delete-existing-images
